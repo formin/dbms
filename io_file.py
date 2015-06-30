@@ -24,6 +24,11 @@ def read_file(filename, type):
 
      # Open a file
     with open(filename, type) as fo:
+
+    # header
+     pickle.load(fo)
+
+    # data
      while True:
          try:
           loaded_objects.append(pickle.load(fo))
