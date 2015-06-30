@@ -21,4 +21,7 @@ def select_table():
 
  sDReturn = search.data_find(str, sValue, sHReturn)
 
- print str[sDReturn]
+ if sDReturn == -1:
+  print 'not exit'
+ else:
+  print str[sDReturn]
