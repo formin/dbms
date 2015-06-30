@@ -1,0 +1,10 @@
+
+def find(l, elem):
+    for row, i in enumerate(l):
+        try:
+            column = i.index(elem)
+        except ValueError:
+            continue
+        #return row, column
+        return row
+    return -1

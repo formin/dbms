@@ -24,8 +24,11 @@ def read_file(filename, type):
 
      # Open a file
     with open(filename, type) as fo:
-     for _ in range(pickle.load(fo)):
-        loaded_objects.append(pickle.load(fo))
+     while True:
+         try:
+          loaded_objects.append(pickle.load(fo))
+         except EOFError:
+             break
 
     # Close opend file
     fo.close()
